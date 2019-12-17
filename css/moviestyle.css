@@ -1,0 +1,134 @@
+@charset "UTF-8";
+footer {
+      background-color: #f2f2f2;
+      padding : 25px;
+    }
+
+  .carousel-inner{
+      width: 100%; /* Set width to 100% */
+      margin-left:200px;
+      margin-top:10px;
+      min-height:200px;
+    }
+
+  
+  .container text-center{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin:0;
+    color:white;
+    }
+  
+  .row.content {height: 550px}
+  
+   @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+    	 
+ 	 
+ 	h1{
+ 	    text-align: left;
+ 	    font-size: 30px;
+ 	    color:white; 
+ 	 }
+ 	 
+ 	 h2{
+ 	 color:white; float:left; margin-left:40px; margin-top:40px; 
+ 	 }
+ 	 
+ 	 h5{
+ 	 color:white; float:left;margin-left:40px;
+ 	 }
+ 	 
+ 	 .info p{
+ 	 color:white; float:left;margin-left:40px;
+ 	 }
+ 	 
+ 	 .movie-image2 {
+		float:left;
+		width:152px;
+		height:214px;
+		position:relative;
+		margin-left:70px;
+	  }
+	  
+	  #rate{
+	  font-size: small;
+	  }
+	  
+	  #movieContent{
+	  font-size: medium;
+	  }
+	  
+	  #mzSort{font-size:medium;}
+	  #mzAddress{font-size: medium;}
+	  #mzPhone{font-size:medium;}
+	  #menuNm{font-size:medium;}
+	  #menuPrice{font-size: medium;}
+	  
+	  #foodinfo{
+ 	  color:white; float:left; margin-left:10px; margin-top:50px; 
+ 	 }
+ 	 
+ 	  .dropbtn {
+	  background-color: #333399;
+	  color: white;
+	  padding: 16px;
+	  font-size: 16px;
+	  border: none;
+		}
+		
+	 .dropup {
+	  position: relative;
+	  display: inline-block;
+	}
+	
+	.dropup-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f1f1f1;
+	  width: 500px;
+	  height: 300px;
+	  bottom: 50px;
+	  z-index: 1;
+	}
+	
+	.dropup-content a {
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	}
+	
+	.dropup-content a:hover {background-color:#c4c4ed}
+	
+	.dropup:hover .dropup-content {
+	  display: block;
+	}
+	
+	.dropup:hover .dropbtn {
+	  background-color: #1e1e62;
+	}
+	
+	#stars1 {
+		float:left;
+		width:60px;
+		height:11px;
+		background:url('css/images/stars.gif') no-repeat 0 0;
+		
+	}
+	#stars-in1 {
+		width:60px;
+		display:inline;
+		background:url('css/images/stars.gif') no-repeat 0 bottom;
+		position:absolute;
+		height:11px;
+		font-size:0;
+		line-height:0;
+		text-indent:-4000px;
+	}
+	#button7{
+		margin-left:400px; 
+		margin-top:260px;
+	}	
+	 
