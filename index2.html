@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Food Cinema - Admin</title>
+
+<!-- Custom fonts for this template-->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css">
+
+<!-- Page level plugin CSS-->
+<link href="vendor/datatables/dataTables.bootstrap4.css"
+	rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link href="css/sb-admin.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+		<a class="navbar-brand mr-1" href="index2.html">Food Cinema</a>
+		<button class="btn btn-link btn-sm text-white order-1 order-sm-0"
+			id="sidebarToggle" href="#">
+			<i class="fas fa-bars"></i>
+		</button>
+	</nav>
+	<!-- Navbar -->
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<ul class="sidebar navbar-nav">
+			<li class="nav-item active"><a class="nav-link"
+				href="index2.html"> <i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>메인화면</span>
+			</a></li>
+			<li class="nav-item"><a class="nav-link" href="tables.html">
+					<i class="fas fa-fw fa-table"></i> <span>회원정보</span>
+			</a></li>
+		</ul>
+
+		<div id="content-wrapper">
+
+			<!-- MAIN STATICS -->
+			<div class="container-fluid">
+				<!-- Breadcrumbs-->
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">주요 통계</a></li>
+					<li class="breadcrumb-item active">Overview</li>
+				</ol>
+				<div class="card mb-3">
+					<div class="card-body">
+						총 회원수 : <br /> <br />
+						<div class="card mb-3">
+							<div class="card-header">
+								<i class="fas fa-table"></i> 회원정보 리스트
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table table-bordered" id="dataTable" width="100%"
+										cellspacing="0">
+										<thead>
+											<tr>
+												<th>주문코드</th>
+												<th>주문내역</th>
+												<th>회원정보</th>
+												<th>조리완료시간</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td>내용1</td>
+											</tr>
+											<tr>
+												<td>내용2</td>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td>내용1</td>
+											</tr>
+											<tr>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td>내용1</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="card-footer small text-muted">Updated now</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- MOVIE STATICS -->
+			<div class="container-fluid">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">영화통계</a></li>
+					<li class="breadcrumb-item active">Overview</li>
+				</ol>
+
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button"
+						data-toggle="dropdown">
+						극장 선택 <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="데이터베이스 연결">10분</a></li>
+						<li>잠실</li>
+						<li>메가박스EOE4</li>
+						<li>자유로</li>
+					</ul>
+				</div>
+
+				<!-- Area Chart Example / canvas id = myAreaChart, myPieChart-->
+				<div id="movieStatic" class="row">
+					<div id="movieStatic_info" class="col-sm-6">
+						<div class="card mb-3">
+							<div class="card-header">
+								<i class="fas fa-chart-area"></i> 날짜별 영화 결제 총수 (AreaChart)
+							</div>
+							<div class="card-body">
+								<canvas id="date_movieAreaChart" width="100%" height="30"></canvas>
+							</div>
+							<div class="card-footer small text-muted">Updated yesterday
+								at 11:59 PM</div>
+						</div>
+					</div>
+					<div id="movieStatic_ticketing" class="col-sm-6">
+						<div class="card mb-3">
+							<div class="card-header">
+								<i class="fas fa-chart-area"></i> 상영 영화별 결제 수 (히스토그램)
+							</div>
+							<div class="card-body">
+								<canvas id="movieOrderAreachart" width="100%" height="30"></canvas>
+							</div>
+							<div class="card-footer small text-muted">Updated yesterday
+								at 11:59 PM</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- MATZIP STATICS -->
+			<div id="matzipStatic" class="container-fluid">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">맛집통계</a></li>
+					<li class="breadcrumb-item active">Overview</li>
+				</ol>
+
+				<!-- Area Chart Example-->
+				<div class="row">
+					<div id="matzipStatic_sex+age" class="col-sm-4">
+						<div class="card mb-3">
+							<div class="card-header">
+								<i class="fas fa-chart-pie"></i> Pie Chart Example
+							</div>
+							<div class="card-body">
+								<canvas id="myPieChart" width="100%" height="100"></canvas>
+							</div>
+							<div class="card-footer small text-muted">Updated yesterday
+								at 11:59 PM</div>
+						</div>
+					</div>
+
+					<div id="matzipStatic_matzip" class="col-sm-4">
+						<div class="card mb-3">
+							<div class="card-header">
+								<i class="fas fa-chart-pie"></i> Pie Chart Example
+							</div>
+							<div class="card-body">
+								<canvas id="myPieChart" width="100%" height="100"></canvas>
+							</div>
+							<div class="card-footer small text-muted">Updated yesterday
+								at 11:59 PM</div>
+						</div>
+					</div>
+
+					<div id="matzipStatic_movie" class="col-sm-4">
+						<div class="card mb-3">
+							<div class="card-header">
+								<i class="fas fa-chart-bar"></i> Bar Chart Example
+							</div>
+							<div class="card-body">
+								<canvas id="myBarChart" width="100%" height="50"></canvas>
+							</div>
+							<div class="card-footer small text-muted">Updated yesterday
+								at 11:59 PM</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- ORDER -->
+			<div class="container-fluid">
+				<!-- Breadcrumbs-->
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">주문 통계</a></li>
+					<li class="breadcrumb-item active">Overview</li>
+				</ol>
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button"
+								data-toggle="dropdown">
+								조리완료시간을 선택하세요 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="데이터베이스 연결">10분</a></li>
+								<li>20분</li>
+								<li>30분</li>
+								<li>40분</li>
+								<li>50분</li>
+								<li>60분 이상</li>
+							</ul>
+						</div>
+						<button type="button" class="btn btn-info" value="Submit Button">전송</button>
+						<div class="card mb-3">
+							<div class="card-header">
+								<i class="fas fa-table"></i> 주문정보 리스트
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-sm-12 col-md-6">
+
+
+										<div class="dataTables_length" id="dataTable_length">
+											<label>Show <select name="dataTable_length"
+												aria-controls="dataTable"
+												class="custom-select custom-select-sm form-control form-control-sm"><option
+														value="10">10</option>
+													<option value="25">25</option>
+													<option value="50">50</option>
+													<option value="100">100</option></select> entries
+											</label>
+										</div>
+
+									</div>
+									<div class="col-sm-12 col-md-6">
+										<div id="dataTable_filter" class="dataTables_filter">
+											<label>Search:<input type="search"
+												class="form-control form-control-sm" placeholder=""
+												aria-controls="dataTable"></label>
+										</div>
+									</div>
+
+
+								</div>
+								<div class="table-responsive">
+									<table class="table table-bordered" id="dataTable" width="100%"
+										cellspacing="0">
+										<thead>
+											<tr>
+												<th>주문코드</th>
+												<th>주문내역</th>
+												<th>회원정보</th>
+												<th>조리완료시간</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td class="dropdown">
+													<button class="btn btn-primary dropdown-toggle"
+														type="button" data-toggle="dropdown">선택</button>
+													<ul class="dropdown-menu">
+														<li>10분</li>
+														<li>20분</li>
+													</ul>
+												</td>
+
+											</tr>
+											<tr>
+												<td>내용2</td>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td>내용1</td>
+											</tr>
+											<tr>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td>내용1</td>
+												<td>내용1</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="card-footer small text-muted">Updated now</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sticky Footer -->
+			<footer class="sticky-footer">
+				<div class="container my-auto">
+					<div class="copyright text-center my-auto">
+						<span>Copyright © Your Website 2019</span>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+		<!-- /.content-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top"> <i
+		class="fas fa-angle-up"></i>
+	</a>
+
+	<!-- Logout Modal-->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+					<button class="close" type="button" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">Select "Logout" below if you are ready
+					to end your current session.</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button"
+						data-dismiss="modal">Cancel</button>
+					<a class="btn btn-primary" href="login.html">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Page level plugin JavaScript-->
+	<script src="vendor/chart.js/Chart.min.js"></script>
+	<script src="vendor/datatables/jquery.dataTables.js"></script>
+	<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="js/sb-admin.min.js"></script>
+
+	<!-- Demo scripts for this page-->
+	<script src="js/demo/datatables-demo.js"></script>
+	<script src="js/demo/chart-area-demo.js"></script>
+</body>
+
+</html>

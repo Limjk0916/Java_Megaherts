@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#dataListTable {
+	font-size: 12px;
+	width: 80%;
+	border-top: 2px solid #384d75;
+	word-wrap: break-word;
+	border-collapse: collapse;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+#dataListTable th, td {
+	box-sizing: border-box;
+	height: 55px;
+}
+
+#dataListTable th {
+	border-bottom: 1px solid #ccc;
+	background: #4AA2A8;
+	font-size: 13px;
+}
+
+#dataListTable td {
+	text-align: center;
+	line-height: 1.3;
+	border-bottom: 1px solid #ccc;
+	font-size: 15px;
+	white-space: nomal;
+}
+
+#tbodycontents {
+	text-align: center;
+	word-break: break-all;
+	word-wrap: break-word;
+	text-overflow: auto;
+	overflow: scroll;
+	white-space: pre-wrap;
+}
+
+#icon img {
+	width: 30px;
+	height: 30px;
+	margin-bottom: -1px;
+}
+</style>
+</head>
+<body>
+	<table id="dataListTable" summary="문의내역 및 답변내역에 대한 정보 제공">
+		<colgroup>
+			<col width="7%">
+			<col width="5%">
+			<col width="30%">
+			<col width="10%">
+			<col width="7%">
+		</colgroup>
+		<thead id="theadtable">
+			<tr>
+				<th scope="col">작성자</th>
+				<th scope="col">김치피오치즈</th>
+				<th scope="col"></th>
+				<th scope="col">등록일 2019-06-14</th>
+				<th scope="col">조회수 123</th>
+			</tr>
+		</thead>
+		<tbody id="items">
+			<tr>
+				<td>제목</td>
+				<td colspan="4">김밥 일번가 김치치즈덮밥이 강식당 시즌2의'김치밥이 피오씁니다' 따라한거 아닌가요?</td>
+			</tr>
+			<tr>
+				<td>내용</td>
+				<td colspan="4" id="tbodycontents">손님보다 사장이 더 많이 먹는 식당! 마진 0% 리얼 100% 진짜 강식당이 찾아온다!</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
